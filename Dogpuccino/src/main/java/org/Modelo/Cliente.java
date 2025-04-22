@@ -2,8 +2,6 @@ package org.Modelo;
 import org.Enums.Tipo_via;
 
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.Objects;
 
 public class Cliente {
     private int id;
@@ -18,27 +16,24 @@ public class Cliente {
     private String correo_electronico;
     private String telefono;
     private LocalDate fecha_nacimiento;
-    private LocalDate fecha_alta;
-    private LocalDate fecha_modificacion;
 
-    public Cliente(int id, String nombre, String apellido1, String apellido2, String nombre_via, Tipo_via tipo_via, String codigo_postal, String ciudad, String provincia, String correo_electronico, String telefono, LocalDate fecha_nacimiento, LocalDate fecha_alta, LocalDate fecha_modificacion) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellido1 = apellido1;
-        this.apellido2 = apellido2;
-        this.nombre_via = nombre_via;
-        this.tipo_via = tipo_via;
-        this.codigo_postal = codigo_postal;
-        this.ciudad = ciudad;
-        this.provincia = provincia;
-        this.correo_electronico = correo_electronico;
-        this.telefono = telefono;
+    public Cliente(LocalDate fecha_nacimiento, String telefono, String correo_electronico, String provincia, String ciudad, String codigo_postal, Tipo_via tipo_via, String nombre_via, String apellido2, String apellido1, String nombre, int id) {
         this.fecha_nacimiento = fecha_nacimiento;
-        this.fecha_alta = fecha_alta;
-        this.fecha_modificacion = fecha_modificacion;
+        this.telefono = telefono;
+        this.correo_electronico = correo_electronico;
+        this.provincia = provincia;
+        this.ciudad = ciudad;
+        this.codigo_postal = codigo_postal;
+        this.tipo_via = tipo_via;
+        this.nombre_via = nombre_via;
+        this.apellido2 = apellido2;
+        this.apellido1 = apellido1;
+        this.nombre = nombre;
+        this.id = id;
     }
 
     public Cliente() {
+
     }
 
     public int getId() {
@@ -135,33 +130,5 @@ public class Cliente {
 
     public void setFecha_nacimiento(LocalDate fecha_nacimiento) {
         this.fecha_nacimiento = fecha_nacimiento;
-    }
-
-    public LocalDate getFecha_alta() {
-        return fecha_alta;
-    }
-
-    public void setFecha_alta(LocalDate fecha_alta) {
-        this.fecha_alta = fecha_alta;
-    }
-
-    public LocalDate getFecha_modificacion() {
-        return fecha_modificacion;
-    }
-
-    public void setFecha_modificacion(LocalDate fecha_modificacion) {
-        this.fecha_modificacion = fecha_modificacion;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Cliente cliente = (Cliente) o;
-        return id == cliente.id && Objects.equals(nombre, cliente.nombre) && Objects.equals(apellido1, cliente.apellido1) && Objects.equals(apellido2, cliente.apellido2) && Objects.equals(nombre_via, cliente.nombre_via) && tipo_via == cliente.tipo_via && Objects.equals(codigo_postal, cliente.codigo_postal) && Objects.equals(ciudad, cliente.ciudad) && Objects.equals(provincia, cliente.provincia) && Objects.equals(correo_electronico, cliente.correo_electronico) && Objects.equals(telefono, cliente.telefono) && Objects.equals(fecha_nacimiento, cliente.fecha_nacimiento) && Objects.equals(fecha_alta, cliente.fecha_alta) && Objects.equals(fecha_modificacion, cliente.fecha_modificacion);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, nombre, apellido1, apellido2, nombre_via, tipo_via, codigo_postal, ciudad, provincia, correo_electronico, telefono, fecha_nacimiento, fecha_alta, fecha_modificacion);
     }
 }

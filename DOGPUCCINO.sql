@@ -9,7 +9,7 @@ CREATE TABLE clientes
     codigo_postal      CHAR(5) NOT NULL,
     ciudad             VARCHAR2(100) NOT NULL,
     provincia          VARCHAR2(100) NOT NULL,
-    correo_electronico VARCHAR2(100) NOT NULL UNIQUE,
+    correo_electronico VARCHAR2(100) NOT NULL,
     fecha_nacimiento   DATE    NOT NULL,
     telefono           CHAR(9) NOT NULL,
     fecha_alta         DATE,
@@ -26,9 +26,9 @@ CREATE TABLE protectora_animales
     codigo_postal      CHAR(5) NOT NULL,
     ciudad             VARCHAR2(100) NOT NULL,
     provincia          VARCHAR2(100) NOT NULL,
-    tiktok             VARCHAR2(100),
-    instagram          VARCHAR2(100),
-    twitter            VARCHAR2(100),
+    tiktok             VARCHAR(100),
+    instagram          VARCHAR(100),
+    twitter            VARCHAR(100),
     telefono           CHAR(9) NOT NULL,
     fecha_alta         DATE,
     fecha_modificacion DATE
@@ -115,14 +115,9 @@ CREATE TABLE modifican
     FOREIGN KEY (id_citas) REFERENCES citas (id)
 );
 /*
-drop table clientes;
-drop table protectora_animales;
-drop table usuario;
-drop table patologia;
-drop table razas;
-drop table perros;
 drop table perros_patologia;
+drop table patologia;
 drop table perros_clientes;
-drop table citas;
-drop table modifican;
-*/
+drop table perros;
+drop table protectora_animales;
+drop table clientes;*/

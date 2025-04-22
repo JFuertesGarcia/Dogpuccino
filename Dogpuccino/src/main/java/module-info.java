@@ -11,6 +11,7 @@ module org.example.dogpuccino {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.desktop;
+    requires java.sql;
 
     opens org.Controlador to javafx.fxml;
     exports org.Controlador;
