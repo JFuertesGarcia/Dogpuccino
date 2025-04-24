@@ -34,8 +34,8 @@ public class DogpuccinoController {
         Integer id = 123;
         //select pendiente
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(DogpuccinoApplication.class.getResource("/org/Vista/inicio.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        FXMLLoader fxmlLoader = new FXMLLoader(DogpuccinoApplication.class.getResource("/org/Vista/masInfo.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 300, 400);
         stage.setTitle("DOGPUCCINO - INFO");
         stage.setScene(scene);
         stage.show();
