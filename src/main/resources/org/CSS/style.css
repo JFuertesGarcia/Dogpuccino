@@ -1,0 +1,77 @@
+.root {
+    -fx-background-color: #d2b48c;
+}
+
+.label {
+    -fx-text-fill: #4b3832;
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-background-color: #B5A872;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-text-fill: #4b3832;
+    -fx-border-color: #bfa77a;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+#titulo{
+    -fx-font-family: Monospaced;
+    -fx-font-size: 24px;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+#img1, #img2, #img3{
+    -fx-background-color: linear-gradient(to bottom, #e6e6e6, #d1d1d1);
+    -fx-background-radius: 20;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 3, 3);
+}
+
+#nombre_perro, #nombre_perro2, #nombre_perro3 {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+#edad_sexo, #edad_sexo2, #edad_sexo3 {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+#txtbuscar {
+    -fx-background-color: #e6ddc4;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: transparent;
+    -fx-padding: 4 12;
+}
+
+#footer {
+    -fx-background-color: #3d3d3d;
+    -fx-text-fill: #c9c9c9;
+    -fx-font-size: 12px;
+    -fx-padding: 10;
+}
+
+#btnBuscar, #btnMenu, #btnSesion{
+    -fx-background-color: transparent; -fx-padding: 0; -fx-border-color: transparent;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.button:hover{
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}

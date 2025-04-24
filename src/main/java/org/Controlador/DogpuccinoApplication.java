@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import org.Controlador.DogpuccinoUtils;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class DogpuccinoApplication extends Application {
     @Override
@@ -14,7 +15,8 @@ public class DogpuccinoApplication extends Application {
         DogpuccinoUtils utils = new DogpuccinoUtils();
         DogpuccinoController controller = new DogpuccinoController();
         FXMLLoader fxmlLoader = new FXMLLoader(DogpuccinoApplication.class.getResource("/org/Vista/inicio.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 840, 550);
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/org/CSS/style.css")).toExternalForm());
         stage.setTitle("DOGPUCCINO - INICIO");
         stage.setScene(scene);
         // controller.cargarPerros(utils.elegirPerros(utils.obtenerPerros()));
