@@ -25,19 +25,19 @@
       
                           <Label fx:id="nombre_perro" layoutX="14.0" layoutY="64.0" prefHeight="20.0" prefWidth="193.0" text="Perro1" BorderPane.alignment="CENTER" />
                           <Label fx:id="edad_sexo" layoutX="14.0" layoutY="96.0" prefHeight="17.0" prefWidth="116.0" text="Edad, sexo" />
-                          <Button fx:id="btnInfo1" layoutX="155.0" layoutY="92.0" mnemonicParsing="false" text="+ info" />
+                          <Button fx:id="btnInfo1" layoutX="155.0" layoutY="92.0" mnemonicParsing="false" text="+ info" onAction="#Info1"/>
                       </AnchorPane>
                       <AnchorPane fx:id="img2" layoutX="296.0" prefHeight="127.0" prefWidth="200.0">
       
                           <Label fx:id="nombre_perro2" layoutX="14.0" layoutY="64.0" prefHeight="20.0" prefWidth="193.0" text="Perro1" BorderPane.alignment="CENTER" />
                           <Label fx:id="edad_sexo2" layoutX="14.0" layoutY="96.0" prefHeight="17.0" prefWidth="116.0" text="Edad, sexo" />
-                          <Button fx:id="btnInfo2" layoutX="155.0" layoutY="92.0" mnemonicParsing="false" text="+ info" />
+                          <Button fx:id="btnInfo2" layoutX="155.0" layoutY="92.0" mnemonicParsing="false" text="+ info" onAction="#Info2"/>
                       </AnchorPane>
                       <AnchorPane fx:id="img3" layoutX="592.0" prefHeight="127.0" prefWidth="200.0">
       
                           <Label fx:id="nombre_perro3" layoutX="14.0" layoutY="64.0" prefHeight="20.0" prefWidth="193.0" text="Perro1" BorderPane.alignment="CENTER" />
                           <Label fx:id="edad_sexo3" layoutX="14.0" layoutY="96.0" prefHeight="17.0" prefWidth="116.0" text="Edad, sexo" />
-                          <Button fx:id="btnInfo3" layoutX="155.0" layoutY="92.0" mnemonicParsing="false" text="+ info" />
+                          <Button fx:id="btnInfo3" layoutX="155.0" layoutY="92.0" mnemonicParsing="false" text="+ info" onAction="#Info3"/>
                       </AnchorPane>
                   </children>
               </Pane>

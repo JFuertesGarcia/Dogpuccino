@@ -9,7 +9,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="300 " xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Controlador.DogpuccinoController">
     <children>
         <ImageView fitHeight="168.0" fitWidth="229.0" layoutX="36.0" layoutY="29.0" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="101.0" layoutY="210.0" text="NOMBRE">
+      <Label fx:id="Nombre" alignment="CENTER" contentDisplay="CENTER" layoutX="101.0" layoutY="210.0" text="NOMBRE">
          <cursor>
             <Cursor fx:constant="MOVE" />
          </cursor>
@@ -17,10 +17,10 @@
             <Font name="Gill Sans Ultra Bold Condensed" size="27.0" />
          </font>
       </Label>
-      <Label layoutX="87.0" layoutY="267.0" text="Edad:" />
-      <Label layoutX="88.0" layoutY="284.0" text="Sexo:" />
-      <Label layoutX="87.0" layoutY="301.0" text="Raza:" />
-      <Label layoutX="87.0" layoutY="318.0" text="Patologías:" />
+      <Label fx:id="Edad" layoutX="87.0" layoutY="267.0" text="Edad:" />
+      <Label fx:id="Sexo" layoutX="88.0" layoutY="284.0" text="Sexo:" />
+      <Label fx:id="Raza" layoutX="87.0" layoutY="301.0" text="Raza:" />
+      <Label fx:id="Patologia"  layoutX="87.0" layoutY="318.0" text="Patologías:" />
       <Button layoutX="119.0" layoutY="346.0" mnemonicParsing="false" text="Reservar" />
     </children>
 </AnchorPane>
