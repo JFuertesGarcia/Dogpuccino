@@ -14,10 +14,10 @@ public class DogpuccinoApplication extends Application {
         DogpuccinoUtils utils = new DogpuccinoUtils();
         DogpuccinoController controller = new DogpuccinoController();
         FXMLLoader fxmlLoader = new FXMLLoader(DogpuccinoApplication.class.getResource("/org/Vista/inicio.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 700, 450);
         stage.setTitle("DOGPUCCINO - INICIO");
         stage.setScene(scene);
-        // controller.cargarPerros(utils.elegirPerros(utils.obtenerPerros()));
+        controller.cargarPerros(utils.elegirPerros(utils.obtenerPerros()));
         stage.show();
 
     }

@@ -44,21 +44,27 @@ public class DogpuccinoUtils {
     }
     public List<Perro> obtenerPerros() throws SQLException {
         List<Perro> perros = new ArrayList<>();
-        ResultSet rs = ejecutarConsulta("SELECT * FROM Perro");
-        while (rs.next()) {
-            Perro perro = new Perro();
-            perro.setId(rs.getInt("id"));
-            perro.setNombre(rs.getString("nombre"));
-            perro.setSexo(Sexo.valueOf(rs.getString("sexo")));
-            perro.setFoto(rs.getString("foto"));
-            perro.setAdoptado(Adoptado.valueOf(rs.getString("adoptado")));
-            perro.setFecha_nacimiento(rs.getDate("fecha_nacimiento").toLocalDate());
-            perro.setFechaAlta(rs.getDate("fecha_alta").toLocalDate());
-            perro.setFechaModificacion(rs.getDate("fecha_modificacion").toLocalDate());
+        try (Connection conexion = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##DOGPUCCINO","123456");
+             Statement stmt = conexion.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT * FROM C##DOGPUCCINO.PERROS")) {
+            while (rs.next()) {
+                Perro perro = new Perro();
+                perro.setId(rs.getInt("id"));
+                perro.setNombre(rs.getString("nombre"));
+                perro.setSexo(Sexo.valueOf(rs.getString("sexo")));
+                perro.setFoto(rs.getString("foto"));
+                perro.setAdoptado(Adoptado.valueOf(rs.getString("adoptado")));
+                perro.setFecha_nacimiento(rs.getDate("fecha_nacimiento").toLocalDate());
+                perro.setFechaAlta(rs.getDate("fecha_alta").toLocalDate());
+                perro.setFechaModificacion(rs.getDate("fecha_modificacion").toLocalDate());
 
-            perros.add(perro);
+                perros.add(perro);
+            }
+            return perros;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
         }
-        return perros;
     }
     public List<Perro> elegirPerros(List<Perro> lista){
         if (lista.size() < 3) {
